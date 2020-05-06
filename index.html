@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MyResume</title>
+  <!--先重置css-->
+  <link href="css/css_reset.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet"/>
+
+  <!-- fontawesome -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css'/>
+
+  <!-- 自製CSS版型 -->
+  <link href="css/main.css" rel="stylesheet" />
+
+</head>
+<body>
+
+  <!-- 隱藏互動方塊 -->
+  <section class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat.
+    </div>
+  </section>
+
+  <!-- 側邊收縮攔 -->
+  <aside class="side-menu">
+    <input class="switch" type="text" value="0" hidden>
+    <div class="aside-container">
+      <div class="open-tag"> 
+        <i class="fas fa-angle-right"></i>
+      </div>
+      <div class="aside-content">
+        <a id="github" href="#">
+          <img src="https://img.icons8.com/ios-filled/36/000000/github.png"/>
+        </a>
+        <a id="mail"  href="#">
+          <img src="https://img.icons8.com/material-two-tone/36/000000/important-mail.png"/>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <header>
+    <div class="main-header">
+      <div class="container">
+        <nav class="nav-bar">
+          <a href="#" class="nav-item">About me 關於我</a>
+          <a href="#" class="nav-item">My Skill 我的技能</a>
+          <a href="#" class="nav-item">My Studying 我的學習</a>
+          <a href="#" class="nav-item">My Work 我的作品</a>
+        </nav>
+        <div class="banner">
+          <div class="banner-text">
+            <h1>
+              歡迎來到我的網頁
+              <small>
+                一個剛學習前端的新手的個人網站，主要是放一些個人學習作品。
+              </small>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="progress">
+    <h2>網站更新日誌<small>紀錄每次網站更新進度與學習內容</small></h2>
+    <div class="progress-content">
+
+    </div>
+  </section>
+
+  <main>
+    <div class="main-content">
+      <div class="container">
+        <div class="content-text">
+          <section class="about-me content-item">
+            <div class="about-text">
+              <h1>關於我
+                <small>About Me</small>
+              </h1>
+              <div class="about-text-inside">
+                <h2>
+                  學歷 
+                  <small>資訊管理學系</small>
+                </h2>
+                <h2>
+                  工作經歷
+                  <small>2011-2013 力羽科技 美工工程師</small>
+                  <small>2015-2019 樂陞美術館 3D美術</small>
+                </h2>
+                <h2>
+                  自我介紹
+                  <small>
+
+                  </small>
+                </h2>
+              </div>
+            </div>
+          </section>
+          <section class="my-skill content-item">
+            <h1>
+              我的技能
+              <small>My Skill</small>
+            </h1>
+            <div class="skills">
+              <div class="skill-text">
+                <h3>
+                  <img src="https://img.icons8.com/carbon-copy/56/000000/html.png"/>
+                  網頁相關
+                </h3>
+                <div>
+                  <img src="https://img.icons8.com/color/48/000000/html-5.png"/>
+                  HTML
+                </div>
+                <div>
+                  <img src="https://img.icons8.com/color/48/000000/css3.png"/>
+                  CSS
+                </div>
+              </div>
+              <div class="skill-text">
+                <h3>
+                  <img src="https://img.icons8.com/nolan/60/code.png"/>
+                  程式語言
+                </h3>
+                <div>
+                  <img src="https://img.icons8.com/color/48/000000/javascript.png"/>
+                  Javascript
+                </div>
+                <div>
+                  <img src="https://img.icons8.com/dusk/64/000000/php-logo.png"/>
+                  PHP
+                </div>
+              </div>
+              <div class="skill-text">
+                <h3>
+                  <img src="https://img.icons8.com/dusk/50/000000/design.png"/>
+                  美術軟體
+                </h3>
+                <div>
+                  <img src="https://img.icons8.com/color/48/000000/adobe-photoshop.png"/>
+                  Photoshop
+                </div>
+              </div>
+              <div class="skill-text">
+                <h3>
+                  <img src="https://img.icons8.com/color/60/000000/3d-scale.png"/>
+                  3D相關
+                </h3>
+                <div>
+                  <img src="https://img.icons8.com/color/44/000000/3ds-max.png"/>
+                  3Dsmax
+                </div>
+                <div>
+                  <img src="https://img.icons8.com/color/44/000000/autodesk-maya.png"/>
+                  Maya
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="my-studying content-item">
+            <h1>我的學習
+              <small>My Studying</small>
+            </h1>
+            <div class="studying">
+              <div class="open-modal studying-content">
+                <h2>經典資料流向練習<p>ToDoList</p></h2>
+                <p>利用Vue.js框架為主來練習資料的傳遞與接收。</p>
+              </div>
+              <div class="open-modal studying-content">
+                <h2>API串接練習<p>高雄市空氣盒子</p></h2>
+                <p>串接高雄市政府JSON資料，取得空氣品質資料。</p>
+              </div>
+              <div class="open-modal studying-content">
+                <h2>預定練習項目</h2>
+              </div>
+            </div>
+          </section>
+          <section class="my-work content-item">
+            <h1>我的作品
+              <small>My Work</small>
+            </h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="main-footer">
+      <div class="container">
+        <div class="footer-text">
+          Copyright © 2020 by maxyeh666
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/d17db0e822.js" crossorigin="anonymous"></script>
+
+  <!-- 引入js -->
+  <script src="js/main.js"></script>
+</body>
+</html>

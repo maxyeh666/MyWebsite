@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+</head>
+<body>
+    <label>My ToDoList</label>
+    <input id="input-data" type="text" placeholder="請輸入要做的事">
+    <button id="create">新增</button>
+    <button id="delete">從清單移除</button>
+    <span>ToDoList內容</span> 
+<ul id="note" class="content">
+    
+</ul>
+    <script>
+        let xhr = new XMLHttpRequest()
+        let note = document.querySelector('#note')
+        let getData = document.querySelector('#input-data')
+        let NewTodo = document.querySelector('#create')
+        let UpdateTodo = document.querySelector('#update')
+        let DeleteTodo = document.querySelector('#delete')
+
+        function NoteList(){
+            //清空網頁顯示資料的部分
+            note.innerHTML = ''
+            xhr.open('GET','http://localhost:3000/Notes',true)
+            xhr.send()
+        }
+
+        //讀取完載入清單
+        window.onload = function  (){
+            NoteList()
+        }
+
+        xhr.onreadystatechange = function (){
+            if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400){
+            let data = JSON.parse(xhr.responseText) //先使用reponseText將json轉為字串後接收，再經由JSON.parse轉成陣列放入data
+                for(let i = 0;i < data.length; i++){   //依序將機收到的資料寫入HTML
+                    note.innerHTML = note.innerHTML +'<li>' + '<input name=items'+ i + ' type="checkbox">' + data[i].todo + '  ' + '狀態: ' + data[i].status + 
+                    '  ' + '時間: ' + data[i].time + '<button>修改</button>'
+                }
+            }
+        }
+
+        NewTodo.addEventListener('click',function(input){
+            input = getData.value
+            let date = new Date()
+            let Todo = {
+                todo : input,
+                time : date.getFullYear() + '/' + (date.getMonth()+1) + '/' + date.getDate(), //getMonth()從0開始，所以要+1
+                status : "undone",
+            }
+            //清空輸入欄
+            getData.value = ''
+
+            //新增的資料(Todo)轉為字串
+            let newData = JSON.stringify(Todo)
+            //將資料post進入json
+            xhr.open('POST','http://localhost:3000/Notes',true)
+            xhr.setRequestHeader('Content-type', 'application/json');
+            xhr.send(newData)
+
+            NoteList()
+        })
+
+        DeleteTodo.addEventListener('click',function(){
+            let checker = document.querySelectorAll('input')
+
+            for(let i = 0;i < checker.length; i++){ //取所有input的值
+                if((checker[i]).name.substr(0,5) == "items"){   //取得input裡面name有items的值
+                    if(checker[i].checked){ //取得是否有勾選
+                        xhr.open('DELETE','http://localhost:3000/Notes/'+i,true)
+                        xhr.send()
+                        }
+                    }
+                }
+        })
+    </script>
+</body>
+</html>
