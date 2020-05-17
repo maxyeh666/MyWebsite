@@ -11,22 +11,20 @@ for (i = 0;i < open.length;i++){
 })
 }
 
-$(document).ready(function(){
-    //點到方塊外的地方就關閉方塊
+$(document).ready(function(e){
+    //判斷點擊的方塊決定顯示的內容
     $(document).on('click',function(e){
-        if(e.target == modal){
-            $('.modal').fadeToggle('slow','linear',function(){
-                //判斷點擊的方塊決定顯示的內容
-                $('.open-modal').click(function(e){
-                    if(e.target == $('.open-modal')[0]){
-                        $('span.content').html('<iframe class="iframe" src="https://github.com/maxyeh666/MyWebsite/blob/master/ToDoList.html" frameborder="0"></iframe>')
-                    }else if(e.target == $('.open-modal')[1]){
-                        $('span.content').html('<iframe class="iframe" src="https://github.com/maxyeh666/MyWebsite/blob/master/Airbox.html" frameborder="0"></iframe>')
-                    }
-                })
-            })
+        if(e.target == $('.open-modal')[0]){
+            $('span.content').html('<iframe class="iframe" src="https://maxyeh666.github.io/Todolist-localstorage-/" frameborder="0"></iframe>')
+        }else if(e.target == $('.open-modal')[1]){
+            $('span.content').html('製作中')
+        //點到互動方塊外的地方就關閉方塊
+        }else if(e.target == modal){
+            
+            $('.modal').fadeToggle('slow','linear')
         }
     })
+    
     //關閉內容方塊
     $('.close-modal').on('click',function(){
         $('.modal').fadeToggle('slow')

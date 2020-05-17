@@ -265,12 +265,14 @@ nav {
 }
 
 .studying-content h2 {
+  margin: 10px;
   font-size: 24px;
   color: rgb(64, 133, 211);
 }
 
 .studying-content :nth-child(2) {
   color: #444;
+  padding: 10px;
   text-align: start;
   text-indent: 2rem;
 }
