@@ -24,7 +24,7 @@
   <section class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat.
+      <span class="content"></span>
     </div>
   </section>
 
@@ -36,25 +36,24 @@
         <i class="fas fa-angle-right"></i>
       </div>
       <div class="aside-content">
-        <a id="github" href="#">
-          <img src="https://img.icons8.com/ios-filled/36/000000/github.png"/>
+        <a id="github" href="https://github.com/maxyeh666" title="我的gitHub" target="_blank">
+          <i class="fab fa-github"></i>
         </a>
-        <a id="mail"  href="#">
-          <img src="https://img.icons8.com/material-two-tone/36/000000/important-mail.png"/>
+        <a id="cakeresume"  href="https://www.cakeresume.com/maxyeh666" title="CakeResume" target="_blank">
+          <i class="fas fa-address-book"></i>
         </a>
       </div>
     </div>
-
   </aside>
 
   <header>
     <div class="main-header">
       <div class="container">
         <nav class="nav-bar">
-          <a href="#" class="nav-item">About me 關於我</a>
-          <a href="#" class="nav-item">My Skill 我的技能</a>
-          <a href="#" class="nav-item">My Studying 我的學習</a>
-          <a href="#" class="nav-item">My Work 我的作品</a>
+          <a href="#about" class="nav-item">About me 關於我</a>
+          <a href="#skill" class="nav-item">My Skill 我的技能</a>
+          <a href="#studying" class="nav-item">My Studying 我的學習</a>
+          <a href="#work" class="nav-item">My Work 我的作品</a>
         </nav>
         <div class="banner">
           <div class="banner-text">
@@ -71,9 +70,9 @@
   </header>
 
   <section class="progress">
-    <h2>網站更新日誌<small>紀錄每次網站更新進度與學習內容</small></h2>
+    <h2>網站更新日誌<small>紀錄每次網站的更新，作為個人學習的紀錄</small></h2>
     <div class="progress-content">
-
+      <p>2020-05-17:基本版型與功能完成</p>
     </div>
   </section>
 
@@ -81,7 +80,7 @@
     <div class="main-content">
       <div class="container">
         <div class="content-text">
-          <section class="about-me content-item">
+          <section id="about" class="about-me content-item">
             <div class="about-text">
               <h1>關於我
                 <small>About Me</small>
@@ -89,23 +88,31 @@
               <div class="about-text-inside">
                 <h2>
                   學歷 
-                  <small>資訊管理學系</small>
+                  <small>義守大學 資訊管理學系</small>
                 </h2>
                 <h2>
                   工作經歷
                   <small>2011-2013 力羽科技 美工工程師</small>
+                  <small>主要工作室塑膠面板的印刷與分色，還有處理模具相關發包。</small>
                   <small>2015-2019 樂陞美術館 3D美術</small>
+                  <small>進行遊戲3D模型與貼圖製作。</small>
                 </h2>
                 <h2>
                   自我介紹
                   <small>
-
+                    我來自於高雄市，大學就讀的是義守大學資訊管理學系。
+                    在印刷業工作過2年後，工作上算是十分穩定。
+                    但是日後漸漸地想要去做當初沒有辦法做得的事，那就是參與遊戲的開發。
+                    之後便參加了資策會還有前公司-樂聲美術館舉辦的培訓計畫並順利就職。
+                    經過了4年的的參與大型遊戲製作的專案之後，漸漸已經達到當初想要達到的標的，就開始接著尋找下一個目標。
+                    經過一些研究之後覺得轉往程式方便也許是個不錯的方向，就去參加了由職訓局主辦的網頁前端課程。
+                    結訓後，目前擁有的技術是HTML,CSS,Javascript跟一些基本的PHP語法還有Bootstrap應用，現在正在努力增加其他的技術，像是框架的應用(vue.js)還有其他便於開發的工具(SASS)。
                   </small>
                 </h2>
               </div>
             </div>
           </section>
-          <section class="my-skill content-item">
+          <section id="skill" class="my-skill content-item">
             <h1>
               我的技能
               <small>My Skill</small>
@@ -165,29 +172,37 @@
               </div>
             </div>
           </section>
-          <section class="my-studying content-item">
+          <section id="studying" class="my-studying content-item">
             <h1>我的學習
               <small>My Studying</small>
             </h1>
             <div class="studying">
               <div class="open-modal studying-content">
-                <h2>經典資料流向練習<p>ToDoList</p></h2>
-                <p>利用Vue.js框架為主來練習資料的傳遞與接收。</p>
+                <h2>經典練習<p>ToDoList</p></h2>
+                <p>利用localstorage來進行資料的CRUD練習。(github上另有使用json-server版本的練習)</p>
               </div>
               <div class="open-modal studying-content">
                 <h2>API串接練習<p>高雄市空氣盒子</p></h2>
-                <p>串接高雄市政府JSON資料，取得空氣品質資料。</p>
-              </div>
-              <div class="open-modal studying-content">
-                <h2>預定練習項目</h2>
+                <p>串接高雄市政府JSON資料，取得空氣品質資料。(製作中)</p>
               </div>
             </div>
           </section>
-          <section class="my-work content-item">
+          <section id="work" class="my-work content-item">
             <h1>我的作品
               <small>My Work</small>
             </h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+              <div class="container">
+                <div class="projects">
+                  <div class="project-items">
+                    <h2 class="project-items-text"><p>職訓局專題作品:園藝材料行電商網站</p></h2>
+                    <a href="https://myplantwebsite.000webhostapp.com/b11/case/" title="點擊前往專題" target="_blank"><img src="https://images.cakeresume.com/28RDz/maxyeh666/44f9e126-b73b-467c-8210-2e6878fe6e02.png" alt=""></a> 
+                    <p class="project-items-text">參加職訓局完成的結訓作品。專題是以小組進行的，主要使用的是以後端PHP為主，搭配smarty樣板引擎進行資料呈現，有使用部分bootstrap進行RWD的效果呈現。
+                      專題的主題是一位學員家中經營的事業來進行發想，園藝材料行的小型電商網站，有基本的購物車與商品選購。
+                      我的部分是負責的程式碼調整與後台的製作還有少量的介面調整。</p>
+                  </div>
+
+                </div>
+              </div>
           </section>
         </div>
       </div>
@@ -198,6 +213,7 @@
     <div class="main-footer">
       <div class="container">
         <div class="footer-text">
+          <p><i class="far fa-envelope"></i>maxyeh666@gmail.com</p>
           Copyright © 2020 by maxyeh666
         </div>
       </div>
@@ -206,6 +222,9 @@
 
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/d17db0e822.js" crossorigin="anonymous"></script>
+
+  <!-- jquery -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 
   <!-- 引入js -->
   <script src="js/main.js"></script>

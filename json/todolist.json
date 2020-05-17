@@ -3,26 +3,14 @@
     {
       "id": 1,
       "todo": "第一件事",
-      "status": "undone",
-      "time": "2020/05/04"
+      "status": "done",
+      "time": "2020/5/4"
     },
     {
-      "todo": "第二件事",
-      "time": "2020/5/7",
+      "todo": "123",
+      "time": "2020/5/11",
       "status": "undone",
       "id": 2
-    },
-    {
-      "todo": "第三件事",
-      "time": "2020/5/7",
-      "status": "undone",
-      "id": 3
-    },
-    {
-      "todo": "weqwe",
-      "time": "2020/5/7",
-      "status": "done",
-      "id": 4
     }
   ]
 }

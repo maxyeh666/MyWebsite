@@ -11,17 +11,29 @@ for (i = 0;i < open.length;i++){
 })
 }
 
-//關閉內容方塊
-close.addEventListener('click',function(){
-    modal.style.display = 'none'
+$(document).ready(function(){
+    //點到方塊外的地方就關閉方塊
+    $(document).on('click',function(e){
+        if(e.target == modal){
+            $('.modal').fadeToggle('slow','linear',function(){
+                //判斷點擊的方塊決定顯示的內容
+                $('.open-modal').click(function(e){
+                    if(e.target == $('.open-modal')[0]){
+                        $('span.content').html('<iframe class="iframe" src="/ToDoList.html" frameborder="0"></iframe>')
+                    }else if(e.target == $('.open-modal')[1]){
+                        $('span.content').html('<iframe class="iframe" src="/Airbox.html" frameborder="0"></iframe>')
+                    }
+                })
+            })
+        }
+    })
+    //關閉內容方塊
+    $('.close-modal').on('click',function(){
+        $('.modal').fadeToggle('slow')
+    })
 })
 
-//點到方塊外的地方就關閉方塊
-window.onclick = function(event){
-    if(event.target == modal){
-        modal.style.display = 'none'
-    }
-}
+
 
 //收合式側邊欄
 let SideMenu = document.querySelector('.side-menu')
@@ -38,6 +50,22 @@ OpenTag.addEventListener('click',function(){
         SideMenu.classList.remove('menu-switch-on')
         switcher.value = 0
     }
-    console.log(switcher.value)
     return switcher.value
+})
+//控制卷軸動畫與偏移
+$(document).ready(function(){
+    $('a.nav-item').click(function (){
+        //考慮到瀏覽器相容性問題，選擇器要使用html跟body
+        $('html,body').animate({
+            //抓取前往標籤的數值並減去導覽列(nav)所佔的高度(60)
+            scrollTop:$($(this).attr('href')).offset().top - 60 + 'px'
+        },{
+            //動畫時間
+            duration: 500,
+            //動畫方式
+            easing:'swing'
+        })
+
+        return false
+    })
 })

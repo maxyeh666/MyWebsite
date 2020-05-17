@@ -10,6 +10,7 @@ nav {
   margin: 0;
   padding: 0;
   position: fixed;
+  z-index: 3;
 }
 
 .main-header {
@@ -23,7 +24,7 @@ nav {
 }
 
 .nav-bar {
-  height: 10%;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,9 +32,10 @@ nav {
 }
 
 .nav-bar :hover {
+  padding: 10px;
   background-color: rgb(132, 135, 148);
-  transition: 1s;
-  border-radius: 20px;
+  transition: 0.5s;
+  border-radius: 10px;
 }
 
 .nav-item {
@@ -51,6 +53,7 @@ nav {
     url("https://source.unsplash.com/cvBBO4PzWPg/1920x1253") center center / auto
       100%;
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
@@ -75,18 +78,25 @@ nav {
 
 .progress {
   width: 100%;
-  height: 400px;
   background-image: url("https://source.unsplash.com/y02jEX_B0O0/1920x1441");
   background-size: cover;
-  background-position: bottom;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 .progress h2 {
-  color: sienna;
+  width: 80%;
+  margin: 20px auto auto auto;
+  padding: 5px;
+  color: rgb(243, 91, 91);
   font-size: 30px;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px 1px #555;
 }
 
 .progress h2 small {
@@ -94,16 +104,30 @@ nav {
   font-size: 16px;
 }
 
+.progress-content {
+  width: 80%;
+  height: 100%;
+  padding: 5px;
+  margin: 20px auto 20px auto;
+  background-color: rgb(235, 209, 152,0.8);
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px 1px #555;
+}
+
+.progress-content p{
+  color: #555;
+}
+
 .main-footer {
-  height: 120px;
+  height: 100px;
   background-color: rgb(78, 78, 78);
   text-align: center;
 }
 
 .footer-text {
-  height: 100%;
   font-size: 24px;
   color: rgb(219, 203, 171);
+  line-height: 3rem;
 }
 
 .main-content {
@@ -120,9 +144,9 @@ nav {
 
 .content-text h1 {
   color: rgb(77, 74, 73);
-  margin: 0;
   font-size: 40px;
   font-weight: 900;
+  margin: 0;
 }
 
 .content-text h1 small {
@@ -136,13 +160,21 @@ nav {
 
 .content-item h1 {
   background: linear-gradient(155deg, rgb(42, 188, 224) 30%, transparent 50%)
-      center center / 100% 100%
+      center center / 100% 100%;
+  padding: 20px;
+
+}
+
+.content-item:before{
+  content: '';
+  height: 60px;
+  visibility: hidden;
 }
 
 .about-me {
   background-image: url("https://source.unsplash.com/WHUDOzd5IYU/1920x1271");
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
@@ -167,13 +199,19 @@ nav {
 
 .about-text-inside small{
   display: block;
-  color: #444;
+  color: rgb(50, 98, 138);
+  text-indent: 2rem;
+}
+
+.about-text-inside h2 small:nth-child(even){
+  color: rgb(73, 75, 77);
+  text-indent: 4rem;
 }
 
 .my-skill{
   background: url("https://source.unsplash.com/q10VITrVYUM/1920x1439");
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
@@ -227,16 +265,14 @@ nav {
 }
 
 .studying-content h2 {
-  margin-top: 40px;
-  margin-left: 10px;
   font-size: 24px;
   color: rgb(64, 133, 211);
 }
 
 .studying-content :nth-child(2) {
-  margin-left: 30px;
   color: #444;
   text-align: start;
+  text-indent: 2rem;
 }
 
 .studying :hover {
@@ -246,16 +282,17 @@ nav {
 }
 
 .my-studying {
-  background-image: url("https://source.unsplash.com/asviIGR3CPE/1920x1271");
+  background-image: url("https://source.unsplash.com/QJDzYT_K8Xg/1920x1441");
   background-size: cover;
   background-position: bottom;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .my-work {
   background-image: url("https://source.unsplash.com/tZc3vjPCk-Q/1920x1280");
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
@@ -268,15 +305,14 @@ nav {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: rgb(0,0,0,0.7);
 }
 
 .modal-content {
   background-color: rgb(206, 201, 201);
   margin: auto;
-  border: 1px solid #888;
+  border-radius: 2px;
   height: 50%;
-  width: 50%;
+  width: 1440px;
 }
 
 .close-modal {
@@ -293,39 +329,49 @@ nav {
 }
 
 .side-menu {
-  padding-top: 400px;
+  width: 80px;
   margin-left: -60px;
-  width: 60px;
-  height: 80px;
+  padding-top: 400px;
   position: fixed;
   float: left;
   z-index: 1;
 }
 
 .aside-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+  height: 140px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .open-tag {
-  position: absolute;
-  right: -20px;
-  font-size: 40px;
-  line-height: 80px;
-  background-color: #888;
+  width: 100%;
+  font-size: 26px;
+  background-color: rgb(87, 87, 87);
   border-radius: 0px 10px 10px 0px;
-  color: rgb(61, 61, 61);
+  color: rgb(134, 134, 134);
+}
+
+.open-tag:before{
+  content:'';
+  height: 100%;
+  width: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .aside-content {
-  height: 100%;
+  width: 100%;
+  background-color: rgb(117, 117, 117);
+  color: rgb(26, 78, 126);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #555;
+  justify-content: center;
+}
+
+.aside-content a{
+  color: inherit;
+  font-size: 40px;
+  margin: 10px;
 }
 
 .menu-switch-on {
@@ -344,4 +390,38 @@ nav {
 
 .menu-switch-off .open-tag .fa-angle-right{
   transform: scaleX(1);
+}
+
+.iframe{
+  height: 100%;
+  width: 100%;
+}
+
+.projects{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-items{
+  margin: 20px;
+  background-color: rgb(235, 209, 152,0.8);
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px 1px #555;
+  color: rgb(64, 133, 211); 
+}
+
+.project-items img{
+  width: 50%;
+}
+
+.project-items-text {
+  margin: 10px;
+  text-indent: 2rem;
+}
+
+.project-items-text:last-child{
+  text-align: left;
 }
