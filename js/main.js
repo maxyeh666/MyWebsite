@@ -19,9 +19,9 @@ $(document).ready(function(){
                 //判斷點擊的方塊決定顯示的內容
                 $('.open-modal').click(function(e){
                     if(e.target == $('.open-modal')[0]){
-                        $('span.content').html('<iframe class="iframe" src="/ToDoList.html" frameborder="0"></iframe>')
+                        $('span.content').html('<iframe class="iframe" src="https://github.com/maxyeh666/MyWebsite/blob/master/ToDoList.html" frameborder="0"></iframe>')
                     }else if(e.target == $('.open-modal')[1]){
-                        $('span.content').html('<iframe class="iframe" src="/Airbox.html" frameborder="0"></iframe>')
+                        $('span.content').html('<iframe class="iframe" src="https://github.com/maxyeh666/MyWebsite/blob/master/Airbox.html" frameborder="0"></iframe>')
                     }
                 })
             })
