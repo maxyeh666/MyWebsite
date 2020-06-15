@@ -17,7 +17,7 @@ $(document).ready(function(e){
         if(e.target == $('.open-modal')[0]){
             $('span.content').html('<iframe class="iframe" src="https://maxyeh666.github.io/Todolist-localstorage-/" frameborder="0"></iframe>')
         }else if(e.target == $('.open-modal')[1]){
-            $('span.content').html('製作中')
+            $('span.content').html('<iframe class="iframe" src="https://maxyeh666.github.io/googlemap-api-vue-/" frameborder="0"></iframe>')
         //點到互動方塊外的地方就關閉方塊
         }else if(e.target == modal){
             
